@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Shree Krishna Life Care</title>
+    
+    <meta name="description" content="Get in touch with our experts for your insurance and financial planning needs.">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: var(--radius-sm);
+            background: var(--light);
+            font-family: var(--font-primary);
+            transition: all 0.3s ease;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        textarea.form-control {
+            height: 150px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <header class="header glass scrolled">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/resources/logo-lic.png" alt="Shree Krishna Life Care">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <div class="dropdown">
+                    <a href="services.html">Services <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
+                    <div class="mega-menu glass">
+                        <div class="mega-menu-list">
+                            <h4>Personal Finance</h4>
+                            <ul>
+                                <li><a href="child_edu_fund.html">Child Education Fund</a></li>
+                                <li><a href="term_plan.html">Term Plan</a></li>
+                                <li><a href="mediclaim.html">Mediclaim</a></li>
+                                <li><a href="mutual_fund.html">SIP, Mutual Fund</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-list">
+                            <h4>Business</h4>
+                            <ul>
+                                <li><a href="vehicle_insurance.html">Vehicle Insurance</a></li>
+                                <li><a href="fire_policy.html">Fire Policy</a></li>
+                                <li><a href="employee_insurance.html">Employer Employee</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="gallery.html">Achievements</a>
+                <a href="contact.html" class="active">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="padding: 150px 0 80px; background: var(--grad-primary); text-align: center; color: white;">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 20px; color: white;">Contact Us</h1>
+            <p style="color: #cbd5e1;">Home / Contact</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 60px;">
+                <!-- Contact Info -->
+                <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
+                    <div class="section-title" style="text-align: left; margin-bottom: 40px;">
+                        <span class="subtitle">Get in Touch</span>
+                        <h2>Feel free to get in touch with experts</h2>
+                    </div>
+                    
+                    <div class="card glass" style="margin-bottom: 30px; display: flex; align-items: center; gap: 20px;">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center; color: var(--secondary); font-size: 1.5rem;">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">Call Us</h4>
+                            <a href="tel:9879444710" style="color: var(--text-muted); font-weight: 500;">+91 98794 44710</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card glass" style="margin-bottom: 30px; display: flex; align-items: center; gap: 20px;">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(16, 185, 129, 0.1); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.5rem;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">Email Us</h4>
+                            <a href="mailto:vipulpatel2089@gmail.com" style="color: var(--text-muted); font-weight: 500;">vipulpatel2089@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card glass" style="display: flex; align-items: center; gap: 20px;">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(245, 158, 11, 0.1); display: flex; align-items: center; justify-content: center; color: #f59e0b; font-size: 1.5rem;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">Location</h4>
+                            <p style="color: var(--text-muted); font-weight: 500; margin: 0;">B/43, Ground floor, Sardar Patel Mall-B, Nr. Bank of Baroda, Nikol Gam Road, Nikol, Ahmedabad 382350</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div style="flex: 1.5; min-width: 300px;" data-aos="fade-left">
+                    <div class="card glass" style="padding: 40px;">
+                        <h3 style="margin-bottom: 30px;">Send a Message</h3>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name" name="name" required>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Date of Birth" name="dob">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email Address" name="email" required>
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Phone Number" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Subject" name="subject">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Write a message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section style="height: 450px; width: 100%;" data-aos="fade-up">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d117491.32910868831!2d72.56146781266764!3d23.038306540907836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x395e875c4881bf35%3A0x797cff847c211289!2sB%2F43%2C%20Ground%20floor%2C%20SARDAR%20PATEL%20MALL%2C%20Nikol%20Gam%20Rd%2C%20Nikol%2C%20Ahmedabad%2C%20Gujarat%20382350!3m2!1d23.0381699!2d72.6438709!5e0!3m2!1sen!2sin!4v1718708111781!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <img src="assets/images/resources/logo-lic-final.png" alt="Logo" style="margin-bottom: 20px; filter: brightness(0) invert(1); height: 40px;">
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Providing the best financial planning for a secure life and family future.</p>
+                </div>
+                <div class="footer-widget">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:vipulpatel2089@gmail.com"><i class="fas fa-envelope" style="margin-right: 10px;"></i>vipulpatel2089@gmail.com</a></li>
+                        <li><a href="tel:9879444710"><i class="fas fa-phone" style="margin-right: 10px;"></i>+91 98794 44710</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shree Krishna Life Care. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

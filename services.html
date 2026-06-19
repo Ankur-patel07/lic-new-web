@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Shree Krishna Life Care</title>
+    
+    <meta name="description" content="Explore our comprehensive range of insurance and financial services.">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+        .service-card {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .service-card:hover .service-img {
+            transform: scale(1.05);
+        }
+        
+        .service-img-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .service-img-wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+        }
+        
+        .service-content {
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .service-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .service-content a {
+            color: var(--secondary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .service-content a:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <header class="header glass scrolled">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/resources/logo-lic.png" alt="Shree Krishna Life Care">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <div class="dropdown">
+                    <a href="services.html" class="active">Services <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
+                    <div class="mega-menu glass">
+                        <div class="mega-menu-list">
+                            <h4>Personal Finance</h4>
+                            <ul>
+                                <li><a href="child_edu_fund.html">Child Education Fund</a></li>
+                                <li><a href="term_plan.html">Term Plan</a></li>
+                                <li><a href="mediclaim.html">Mediclaim</a></li>
+                                <li><a href="mutual_fund.html">SIP, Mutual Fund</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-list">
+                            <h4>Business</h4>
+                            <ul>
+                                <li><a href="vehicle_insurance.html">Vehicle Insurance</a></li>
+                                <li><a href="fire_policy.html">Fire Policy</a></li>
+                                <li><a href="employee_insurance.html">Employer Employee</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="gallery.html">Achievements</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="padding: 150px 0 80px; background: var(--grad-primary); text-align: center; color: white;">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 20px; color: white;">Our Services</h1>
+            <p style="color: #cbd5e1;">Home / Services</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section-padding bg-gradient-animated">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <span class="subtitle">Comprehensive Coverage</span>
+                <h2>We cover all your insurance needs</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;">
+                <!-- Service 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-img-wrapper">
+                        <img src="assets/images/resources/child_edu_fund.jpg" alt="Child Education Fund" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Child Education Fund</h3>
+                        <a href="child_edu_fund.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="service-img-wrapper">
+                        <img src="assets/images/services/services-1-2.jpg" alt="Child Marriage Fund" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Child Marriage Fund</h3>
+                        <a href="child_mrg_fund.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-img-wrapper">
+                        <img src="assets/images/resources/yuva_pension.jpg" alt="Yuva Pension Plan" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Yuva Pension Plan</h3>
+                        <a href="yuva_pension_plan.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="service-img-wrapper">
+                        <img src="assets/images/resources/retirement.jpg" alt="Retirement Plan" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Retirement Plan</h3>
+                        <a href="retirement_planning.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-img-wrapper">
+                        <img src="assets/images/services/services-1-5.jpg" alt="Term Plan" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Term Plan</h3>
+                        <a href="term_plan.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="service-img-wrapper">
+                        <img src="assets/images/resources/mediclaim.jpg" alt="Mediclaim" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Mediclaim</h3>
+                        <a href="mediclaim.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-img-wrapper">
+                        <img src="assets/images/resources/mutualfund.jpg" alt="SIP & Mutual Fund" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>SIP, Mutual Fund</h3>
+                        <a href="mutual_fund.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="450">
+                    <div class="service-img-wrapper">
+                        <img src="assets/images/services/services-1-8.jpg" alt="Accident Policy" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Accident Policy</h3>
+                        <a href="accident_policy.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-img-wrapper">
+                        <img src="assets/images/services/services-1-11.png" alt="Vehicle Insurance" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Vehicle Insurance</h3>
+                        <a href="vehicle_insurance.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 10 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="550">
+                    <div class="service-img-wrapper">
+                        <img src="assets/images/services/services-1-13.jpeg" alt="Fire Policy" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Fire Policy</h3>
+                        <a href="fire_policy.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 11 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-img-wrapper">
+                        <img src="assets/images/services/services-1-15.jpeg" alt="Employer Employee Insurance" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Employer Employee Insurance</h3>
+                        <a href="employee_insurance.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 12 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="650">
+                    <div class="service-img-wrapper">
+                        <img src="assets/images/services/services-1-16.jpeg" alt="Cancer Care Policy" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Cancer Care Policy</h3>
+                        <a href="cancer_policy.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <img src="assets/images/resources/logo-lic-final.png" alt="Logo" style="margin-bottom: 20px; filter: brightness(0) invert(1); height: 40px;">
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Providing the best financial planning for a secure life and family future.</p>
+                </div>
+                <div class="footer-widget">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:vipulpatel2089@gmail.com"><i class="fas fa-envelope" style="margin-right: 10px;"></i>vipulpatel2089@gmail.com</a></li>
+                        <li><a href="tel:9879444710"><i class="fas fa-phone" style="margin-right: 10px;"></i>+91 98794 44710</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shree Krishna Life Care. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
