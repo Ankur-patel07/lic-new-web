@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,14 +49,12 @@
             background: linear-gradient(160deg, #f0f6ff 0%, #f8fafc 60%, #eef4ff 100%);
         }
         .contact-wrap {
-            display: grid;
-            grid-template-columns: 1fr 1.35fr;
-            gap: 50px;
-            align-items: start;
+            display: flex;
+            justify-content: center;
         }
 
         /* ── Info Panel ── */
-        .info-panel { display: flex; flex-direction: column; gap: 18px; }
+        .info-panel { display: flex; flex-direction: column; gap: 18px; max-width: 600px; width: 100%; }
 
         .info-badge {
             display: inline-flex;
@@ -144,124 +142,6 @@
         }
         .info-card:hover .ic-value { color: #2563eb !important; }
 
-        /* ── Form Card ── */
-        .form-card {
-            background: #fff;
-            border-radius: 28px;
-            padding: clamp(30px,5vw,50px);
-            box-shadow: 0 20px 60px rgba(37,99,235,0.08);
-            border: 1px solid rgba(37,99,235,0.08);
-            position: relative;
-            overflow: hidden;
-        }
-        .form-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #2563eb, #10b981, #2563eb);
-            background-size: 200% 100%;
-            animation: shimmer 3s linear infinite;
-        }
-        @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
-
-        .form-card-header { margin-bottom: 32px; }
-        .form-card-header h3 { font-size: 1.6rem; font-weight: 800; color: var(--primary); margin-bottom: 6px; }
-        .form-card-header p  { color: var(--text-muted); font-size: 0.93rem; }
-
-        .form-group { margin-bottom: 22px; position: relative; }
-        .form-label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-main);
-            margin-bottom: 8px;
-            letter-spacing: 0.3px;
-        }
-        .form-label span { color: #ef4444; margin-left: 2px; }
-
-        .input-wrap { position: relative; }
-        .input-wrap i {
-            position: absolute;
-            left: 16px; top: 50%;
-            transform: translateY(-50%);
-            color: #94a3b8;
-            font-size: 1rem;
-            pointer-events: none;
-            transition: color 0.3s;
-        }
-        .textarea-wrap i { top: 18px; transform: none; }
-
-        .form-control {
-            width: 100%;
-            padding: 14px 16px 14px 46px;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 14px;
-            background: #f8fafc;
-            font-family: var(--font-primary);
-            font-size: 0.97rem;
-            color: var(--text-main);
-            transition: all 0.3s ease;
-            outline: none;
-        }
-        .form-control:focus {
-            border-color: var(--secondary);
-            background: #fff;
-            box-shadow: 0 0 0 4px rgba(37,99,235,0.08);
-        }
-        .form-control:focus + i,
-        .input-wrap:focus-within i { color: var(--secondary); }
-        textarea.form-control {
-            height: 140px;
-            resize: vertical;
-            padding-top: 14px;
-        }
-
-        /* ── Send Button ── */
-        .send-btn {
-            width: 100%;
-            padding: 16px;
-            border-radius: 14px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            letter-spacing: 0.3px;
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
-            box-shadow: 0 8px 24px rgba(37,99,235,0.35);
-            position: relative;
-            overflow: hidden;
-        }
-        .send-btn::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .send-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(37,99,235,0.45); }
-        .send-btn:hover::after { opacity: 1; }
-        .send-btn:active { transform: translateY(0); }
-
-        .send-hint {
-            text-align: center;
-            margin-top: 14px;
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-        .send-hint i { color: #25d366; }
-
         /* ── Map ── */
         .map-section { position: relative; }
         .map-section iframe {
@@ -289,14 +169,7 @@
         .map-overlay i { color: #ef4444; font-size: 1.1rem; }
 
         /* ── Responsive ── */
-        @media (max-width: 960px) {
-            .contact-wrap { grid-template-columns: 1fr; gap: 36px; }
-            .info-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-            .info-badge, .info-heading, .info-sub { grid-column: 1 / -1; }
-        }
         @media (max-width: 560px) {
-            .info-panel { grid-template-columns: 1fr; }
-            .form-card { padding: 26px 18px; }
             .map-overlay { font-size: 0.76rem; padding: 8px 14px; top: 16px; }
             .info-card { padding: 15px 16px; gap: 13px; }
             .info-icon { width: 44px; height: 44px; font-size: 1.1rem; border-radius: 12px; }
@@ -305,7 +178,36 @@
 </head>
 <body>
 
-    <div class="loader-wrapper"><div class="loader"></div></div>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader-blob blob-blue"></div>
+        <div class="loader-blob blob-green"></div>
+        <div class="loader-inner">
+            <div class="loader-emblem">
+                <svg class="loader-svg" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad-blue-green" x1="0" y1="0" x2="90" y2="90" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2563eb"/>
+                            <stop offset="1" stop-color="#10b981"/>
+                        </linearGradient>
+                    </defs>
+                    <circle class="lr lr-outer" cx="45" cy="45" r="40" stroke="url(#grad-blue-green)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                    <circle class="lr lr-mid" cx="45" cy="45" r="31" stroke="#2563eb" stroke-width="2" stroke-opacity="0.45" stroke-linecap="round" fill="none"/>
+                    <circle class="lr lr-inner" cx="45" cy="45" r="22" stroke="#10b981" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round" fill="none"/>
+                    <line x1="45" y1="37" x2="45" y2="53" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="37" y1="45" x2="53" y2="45" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle class="lr-pulse" cx="45" cy="45" r="5" fill="#2563eb" fill-opacity="0.9"/>
+                </svg>
+            </div>
+            <div class="loader-brand">
+                <p class="loader-tagline">Shree Krishna</p>
+                <h1 class="loader-title">Life Care</h1>
+            </div>
+            <div class="loader-bar-track">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
 
     <header class="header glass">
         <div class="container nav-container">
@@ -374,8 +276,8 @@
         <div class="container">
             <div class="contact-wrap">
 
-                <!-- Left: Info Panel -->
-                <div class="info-panel" data-aos="fade-right">
+                <!-- Info Panel -->
+                <div class="info-panel" data-aos="fade-up">
                     <div class="info-badge"><i class="fas fa-headset"></i> We're Here to Help</div>
                     <h2 class="info-heading">Let's Talk About<br><span>Your Future</span></h2>
                     <p class="info-sub">Reach out to Vipul B Patel — CFN Expert & MDRT Chief Life Insurance Advisor. We'll get back to you within minutes.</p>
@@ -404,49 +306,14 @@
                         </div>
                     </a>
 
-                    <div class="info-card">
+                    <a href="https://maps.app.goo.gl/sTA458bnAmCBSi6t6" target="_blank" rel="noopener noreferrer" class="info-card">
                         <div class="info-icon amber"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="info-card-text">
                             <span class="ic-label">Our Office</span>
                             <span class="ic-value">B/43, Ground floor, Sardar Patel Mall-B, Nr. Bank of Baroda, Nikol, Ahmedabad 382350</span>
                         </div>
+                    </a>
                     </div>
-                </div>
-
-                <!-- Right: Form -->
-                <div class="form-card" data-aos="fade-left">
-                    <div class="form-card-header">
-                        <h3>Send a Message</h3>
-                        <p>Fill in your name and details — we'll reach you right away.</p>
-                    </div>
-
-                    <form id="contactForm" novalidate>
-                        <div class="form-group">
-                            <label class="form-label" for="name">Your Name <span>*</span></label>
-                            <div class="input-wrap">
-                                <input type="text" id="name" class="form-control" placeholder="e.g. Rahul Sharma" required>
-                                <i class="fas fa-user"></i>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label" for="details">Your Details / Message <span>*</span></label>
-                            <div class="input-wrap textarea-wrap">
-                                <textarea id="details" class="form-control" placeholder="Tell us about your insurance or investment needs..." required></textarea>
-                                <i class="fas fa-comment-dots"></i>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="send-btn">
-                            <i class="fab fa-whatsapp" style="font-size:1.2rem;"></i>
-                            Send Message
-                        </button>
-
-                        <p class="send-hint">
-                            <i class="fab fa-whatsapp"></i>
-                            Opens WhatsApp · Business WhatsApp · or Email as fallback
-                        </p>
-                    </form>
                 </div>
 
             </div>
@@ -524,52 +391,5 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            var name    = document.getElementById('name').value.trim();
-            var details = document.getElementById('details').value.trim();
-
-            if (!name || !details) {
-                alert('Please fill in your name and details.');
-                return;
-            }
-
-            var msg = 'Hello, I am ' + name + '.
-
-' + details;
-            var encoded = encodeURIComponent(msg);
-            var phone   = '919879444710';
-
-            /* 1. Try WhatsApp (app deep link) */
-            var waApp  = 'whatsapp://send?phone=' + phone + '&text=' + encoded;
-            /* 2. Fallback: WhatsApp Business (same deep link, different app scheme) */
-            var waBiz  = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + encoded;
-            /* 3. Final fallback: Email */
-            var email  = 'mailto:vipulpatel2089@gmail.com?subject=Enquiry from ' + encodeURIComponent(name) + '&body=' + encoded;
-
-            /* Try native WhatsApp app first */
-            var start = Date.now();
-            var iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.src = waApp;
-            document.body.appendChild(iframe);
-
-            setTimeout(function() {
-                document.body.removeChild(iframe);
-                var elapsed = Date.now() - start;
-                /* If app opened, browser would have blurred — elapsed will be much longer */
-                if (elapsed < 1800) {
-                    /* App didn't open — try WhatsApp web/business */
-                    var win = window.open(waBiz, '_blank');
-                    if (!win || win.closed || typeof win.closed === 'undefined') {
-                        /* Popup blocked or unavailable — fallback to email */
-                        window.location.href = email;
-                    }
-                }
-            }, 1500);
-        });
-    </script>
 </body>
 </html>

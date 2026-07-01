@@ -75,37 +75,200 @@
   }
 }
 
-/* Page Loader */
+/* ============================================
+   PAGE LOADER — LIGHT THEME
+   Matched to site palette: #fbfbfc bg,
+   #2563eb blue, #10b981 emerald
+   ============================================ */
+
 .loader-wrapper {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--light);
-  z-index: 9999;
+  inset: 0;
+  z-index: 99999;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  background: #fbfbfc;
+  overflow: hidden;
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.65s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .loader-wrapper.hidden {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 
-.loader {
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(59, 130, 246, 0.3);
+/* ── Ambient blobs (same as hero section) ── */
+.loader-blob {
+  position: absolute;
   border-radius: 50%;
-  border-top-color: var(--secondary);
-  animation: spin 1s ease-in-out infinite;
+  pointer-events: none;
+  filter: blur(70px);
+  animation: blobDrift 10s ease-in-out infinite;
 }
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
+.loader-blob.blob-blue {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.13) 0%, transparent 70%);
+  top: -120px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.loader-blob.blob-green {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.10) 0%, transparent 70%);
+  bottom: -100px;
+  right: -80px;
+  animation-delay: -5s;
+}
+
+@keyframes blobDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(24px, -18px) scale(1.04); }
+  70%       { transform: translate(-16px, 12px) scale(0.97); }
+}
+
+/* ── Center content ── */
+.loader-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ── SVG Emblem ── */
+.loader-emblem {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Soft glow behind the SVG */
+.loader-emblem::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.10) 0%, transparent 65%);
+  animation: glowPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { transform: scale(1);   opacity: 0.8; }
+  50%       { transform: scale(1.15); opacity: 1;   }
+}
+
+.loader-svg {
+  width: 90px;
+  height: 90px;
+  overflow: visible;
+}
+
+/* Outer ring: slow clockwise, partial arc */
+.lr-outer {
+  stroke-dasharray: 200 51;
+  transform-origin: 45px 45px;
+  animation: spinCW 2.4s linear infinite;
+}
+
+/* Middle ring: counter-clockwise, thinner arc */
+.lr-mid {
+  stroke-dasharray: 120 75;
+  transform-origin: 45px 45px;
+  animation: spinCCW 3s linear infinite;
+}
+
+/* Inner ring: faster clockwise, short arc */
+.lr-inner {
+  stroke-dasharray: 80 58;
+  transform-origin: 45px 45px;
+  animation: spinCW 1.8s linear infinite;
+}
+
+/* Center dot pulse */
+.lr-pulse {
+  transform-origin: 45px 45px;
+  animation: dotPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes spinCW  { to { transform: rotate(360deg);  } }
+@keyframes spinCCW { to { transform: rotate(-360deg); } }
+
+@keyframes dotPulse {
+  0%, 100% { r: 4;   opacity: 0.75; }
+  50%       { r: 6.5; opacity: 1;    }
+}
+
+/* ── Brand text ── */
+.loader-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.loader-tagline {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin: 0;
+  line-height: 1;
+}
+
+.loader-title {
+  font-family: 'Outfit', -apple-system, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+  /* Gradient text — blue to emerald matching brand */
+  background: linear-gradient(120deg, #1d4ed8 0%, #2563eb 45%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Progress bar — indeterminate (loops until page loads) ── */
+.loader-bar-track {
+  width: 160px;
+  height: 3px;
+  background: rgba(37, 99, 235, 0.10);
+  border-radius: 99px;
+  overflow: hidden;
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  width: 35%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, transparent, #2563eb, #10b981, transparent);
+  animation: barSlide 1.4s ease-in-out infinite;
+}
+
+@keyframes barSlide {
+  0%   { transform: translateX(-160px); }
+  100% { transform: translateX(480px); }
 }
 
 /* Scroll Progress Indicator */

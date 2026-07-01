@@ -4,13 +4,20 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Remove Loader
-    setTimeout(() => {
-        const loader = document.querySelector('.loader-wrapper');
-        if(loader) {
-            loader.classList.add('hidden');
+    // 1. Page Loader — hide exactly when the page finishes loading, no fake delay
+    const loader = document.querySelector('.loader-wrapper');
+    if (loader) {
+        const hideLoader = () => loader.classList.add('hidden');
+
+        if (document.readyState === 'complete') {
+            // Page already fully loaded (e.g. cached page)
+            hideLoader();
+        } else {
+            window.addEventListener('load', hideLoader);
+            // Safety fallback: never block user longer than 8s on very slow connections
+            setTimeout(hideLoader, 8000);
         }
-    }, 500);
+    }
 
     // 2. Initialize AOS (Animate on Scroll)
     if(typeof AOS !== 'undefined') {

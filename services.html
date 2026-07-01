@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -83,8 +83,35 @@
 </head>
 <body>
 
-    <div class="loader-wrapper">
-        <div class="loader"></div>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader-blob blob-blue"></div>
+        <div class="loader-blob blob-green"></div>
+        <div class="loader-inner">
+            <div class="loader-emblem">
+                <svg class="loader-svg" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad-blue-green" x1="0" y1="0" x2="90" y2="90" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2563eb"/>
+                            <stop offset="1" stop-color="#10b981"/>
+                        </linearGradient>
+                    </defs>
+                    <circle class="lr lr-outer" cx="45" cy="45" r="40" stroke="url(#grad-blue-green)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                    <circle class="lr lr-mid" cx="45" cy="45" r="31" stroke="#2563eb" stroke-width="2" stroke-opacity="0.45" stroke-linecap="round" fill="none"/>
+                    <circle class="lr lr-inner" cx="45" cy="45" r="22" stroke="#10b981" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round" fill="none"/>
+                    <line x1="45" y1="37" x2="45" y2="53" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="37" y1="45" x2="53" y2="45" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle class="lr-pulse" cx="45" cy="45" r="5" fill="#2563eb" fill-opacity="0.9"/>
+                </svg>
+            </div>
+            <div class="loader-brand">
+                <p class="loader-tagline">Shree Krishna</p>
+                <h1 class="loader-title">Life Care</h1>
+            </div>
+            <div class="loader-bar-track">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
     </div>
 
     <header class="header glass">
