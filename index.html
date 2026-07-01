@@ -1,430 +1,586 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Krishna Life Care | Premium Financial & Insurance Planning</title>
-    
-    <!-- SEO & Meta Tags -->
-    <meta name="description" content="Best financial planning for secure life and family. We provide the best insurance and investment planning in Ahmedabad.">
-    <meta name="keywords" content="Life Insurance, Mediclaim, Mutual Funds, General Insurance, SIP, Investment Planning">
-    
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Vendor CSS (AOS, FontAwesome) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-</head>
-<body>
-
-    <!-- Loader -->
-    <div class="loader-wrapper">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Header / Navigation -->
-    <header class="header glass">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/images/resources/logo-lic.png" alt="Shree Krishna Life Care">
-                </a>
-            </div>
-            
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <nav class="nav-links">
-                <a href="index.html" id="nav-home" class="active">Home</a>
-                <a href="about.html" id="nav-about">About Us</a>
-                <div class="dropdown">
-                    <a href="services.html" id="nav-services">Services <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
-                    <div class="mega-menu glass">
-                        <div class="mega-menu-list">
-                            <h4>Personal Finance</h4>
-                            <ul>
-                                <li><a href="child_edu_fund.html"><i class="fas fa-graduation-cap"></i> Child Education Fund</a></li>
-                                <li><a href="child_mrg_fund.html"><i class="fas fa-ring"></i> Child Marriage Fund</a></li>
-                                <li><a href="yuva_pension_plan.html"><i class="fas fa-user-shield"></i> Yuva Pension Plan</a></li>
-                                <li><a href="retirement_planning.html"><i class="fas fa-umbrella-beach"></i> Retirement Plan</a></li>
-                                <li><a href="term_plan.html"><i class="fas fa-heartbeat"></i> Term Plan</a></li>
-                                <li><a href="mediclaim.html"><i class="fas fa-file-medical"></i> Mediclaim</a></li>
-                                <li><a href="mutual_fund.html"><i class="fas fa-chart-line"></i> SIP, Mutual Fund</a></li>
-                                <li><a href="accident_policy.html"><i class="fas fa-car-crash"></i> Accident Policy</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-menu-list">
-                            <h4>General & Business</h4>
-                            <ul>
-                                <li><a href="vehicle_insurance.html"><i class="fas fa-car"></i> Vehicle Insurance</a></li>
-                                <li><a href="shopkipar_policy.html"><i class="fas fa-store"></i> Shop Keeper Policy</a></li>
-                                <li><a href="fire_policy.html"><i class="fas fa-fire-extinguisher"></i> Fire Policy</a></li>
-                                <li><a href="keyman_insurance.html"><i class="fas fa-key"></i> Keyman Insurance</a></li>
-                                <li><a href="employee_insurance.html"><i class="fas fa-users-cog"></i> Employer Employee</a></li>
-                                <li><a href="monthly_scheme.html"><i class="fas fa-calendar-alt"></i> Monthly Saving Scheme</a></li>
-                                <li><a href="fd_planning.html"><i class="fas fa-piggy-bank"></i> FD Planning</a></li>
-                                <li><a href="tax_planning.html"><i class="fas fa-percent"></i> Tax Planning</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-menu-promo">
-                            <div>
-                                <h5>Shree Krishna Life Care</h5>
-                                <p>Get expert advice & customized solutions for all your insurance & investment planning needs.</p>
-                            </div>
-                            <a href="contact.html" class="btn">Get Free Quote <i class="fas fa-arrow-right" style="margin-left: 5px; font-size: 0.8rem;"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <a href="gallery.html" id="nav-gallery">Achievements</a>
-                <a href="contact.html" id="nav-contact">Contact Us</a>
-            </nav>
-            
-            <div class="header-cta" style="display: flex; align-items: center; gap: 15px;">
-                <a href="tel:9879444710" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">
-                    <i class="fas fa-phone mr-2"></i> +91 98794 44710
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section modern-hero">
-        <div class="container">
-            <div class="row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
-                <div class="col-lg-6" style="flex: 1; min-width: 300px;">
-
-                    <!-- Animated Hero Text Slider -->
-                    <div class="hero-slider" id="heroSlider">
-
-                        <!-- Slide 1: Life Insurance -->
-                        <div class="hero-slide active">
-                            <div class="hero-tag" data-aos="fade-down">
-                                <i class="fas fa-shield-alt"></i> Life Insurance
-                            </div>
-                            <h1 class="reveal-text" style="font-size: 3.6rem; margin-bottom: 20px; color: var(--primary); line-height: 1.2;">
-                                For the <span style="color: var(--secondary);">Better Family</span>
-                            </h1>
-                            <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 40px;">
-                                Insurance is a <strong style="color: var(--primary);">Risk Management.</strong>
-                            </p>
-                        </div>
-
-                        <!-- Slide 2: Mutual Funds -->
-                        <div class="hero-slide">
-                            <div class="hero-tag">
-                                <i class="fas fa-chart-line"></i> Mutual Funds
-                            </div>
-                            <h1 class="reveal-text" style="font-size: 3.6rem; margin-bottom: 20px; color: var(--primary); line-height: 1.2;">
-                                Fulfill Your <span style="color: var(--secondary);">Future Dreams</span>
-                            </h1>
-                            <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 40px;">
-                                Mutual Funds is very important to <strong style="color: var(--primary);">fulfill your Future Dreams.</strong>
-                            </p>
-                        </div>
-
-                        <!-- Slide 3: Health Insurance -->
-                        <div class="hero-slide">
-                            <div class="hero-tag">
-                                <i class="fas fa-heartbeat"></i> Health Insurance
-                            </div>
-                            <h1 class="reveal-text" style="font-size: 3.6rem; margin-bottom: 20px; color: var(--primary); line-height: 1.2;">
-                                Secure Your <span style="color: var(--secondary);">Savings</span>
-                            </h1>
-                            <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 40px;">
-                                Mediclaim is very necessary for hospital expenses in this <strong style="color: var(--primary);">time of inflation.</strong>
-                            </p>
-                        </div>
-
-                    </div><!-- end hero-slider -->
-
-                    <!-- CTA Buttons -->
-                    <div data-aos="fade-up" data-aos-delay="400" style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
-                        <a href="contact.html" class="btn btn-primary">Get a Free Consultation</a>
-                        <a href="about.html" class="btn btn-outline" style="border-color: rgba(0,0,0,0.1) !important; color: var(--text-main) !important;">Learn More</a>
-                    </div>
-
-                </div>
-                <div class="col-lg-6" style="flex: 1; min-width: 300px; position: relative;" data-aos="fade-left" data-aos-delay="300">
-                    <div class="hero-image-wrapper">
-                        <img src="assets/images/backgrounds/main-slider-1-1.jpg" alt="Life Insurance">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <style>
-    /* Hero Slider Styles */
-    .hero-slider {
-        position: relative;
-        min-height: 210px;
-    }
-
-    .hero-slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        pointer-events: none;
-        visibility: hidden;
-    }
-
-    .hero-slide.active {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-        visibility: visible;
-        position: relative;
-    }
-
-    .hero-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(37,99,235,0.05));
-        border: 1px solid rgba(37,99,235,0.2);
-        color: var(--secondary);
-        font-weight: 700;
-        font-size: 0.85rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        padding: 6px 16px;
-        border-radius: 50px;
-        margin-bottom: 20px;
-        backdrop-filter: blur(4px);
-    }
-
-    .hero-tag i {
-        font-size: 0.9rem;
-    }
-
-    .hero-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        border: 2px solid var(--secondary);
-        background: transparent;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        padding: 0;
-    }
-
-    .hero-dot.active {
-        background: var(--secondary);
-        width: 30px;
-        border-radius: 5px;
-    }
-    </style>
-
-    <script>
-    (function() {
-        const slides = document.querySelectorAll('.hero-slide');
-        const dots   = document.querySelectorAll('.hero-dot');
-        let current  = 0;
-        let timer;
-
-        function goToSlide(n) {
-            slides[current].classList.remove('active');
-            dots[current].classList.remove('active');
-            current = (n + slides.length) % slides.length;
-            slides[current].classList.add('active');
-            dots[current].classList.add('active');
-            resetTimer();
-        }
-
-        function resetTimer() {
-            clearInterval(timer);
-            timer = setInterval(() => goToSlide(current + 1), 4000);
-        }
-
-        // expose to HTML onclick
-        window.goToSlide = goToSlide;
-
-        // auto-start
-        timer = setInterval(() => goToSlide(current + 1), 4000);
-    })();
-    </script>
-
-    <!-- Features Section -->
-    <section class="section-padding bg-gradient-animated">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <span class="subtitle">Why Choose Us</span>
-                <h2>Peace of Mind for Your Future</h2>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <!-- Feature 1 -->
-                <div class="card glass" data-aos="fade-up" data-aos-delay="100">
-                    <div style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px;">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 style="margin-bottom: 15px;">Peace Of Mind</h3>
-                    <p style="color: var(--text-muted);">Refers to the reassurance and security that comes from knowing that one's loved ones will be financially protected.</p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="card glass" data-aos="fade-up" data-aos-delay="200">
-                    <div style="font-size: 2.5rem; color: var(--accent); margin-bottom: 20px;">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 style="margin-bottom: 15px;">Secure Family</h3>
-                    <p style="color: var(--text-muted);">Securing your family's financial future through life insurance is an essential step in comprehensive financial planning.</p>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="card glass" data-aos="fade-up" data-aos-delay="300">
-                    <div style="font-size: 2.5rem; color: #f59e0b; margin-bottom: 20px;">
-                        <i class="fas fa-umbrella-beach"></i>
-                    </div>
-                    <h3 style="margin-bottom: 15px;">Happy Retirement</h3>
-                    <p style="color: var(--text-muted);">Happy retirement planning involves a thorough understanding of investment strategies to ensure a comfortable future.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
-                <div style="flex: 1; min-width: 300px; position: relative;" data-aos="fade-right">
-                    <img src="assets/images/resources/about-one-img-1.jpg" alt="About Shree Krishna Life Care" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
-                    <div class="glass" style="position: absolute; bottom: -30px; right: -30px; padding: 30px; border-radius: var(--radius-md); text-align: center; border-left: 4px solid var(--secondary);">
-                        <h2 style="font-size: 3rem; color: var(--secondary); margin-bottom: 0;">14+</h2>
-                        <p style="font-weight: 600; color: var(--primary);">Years of Experience</p>
-                    </div>
-                </div>
-                
-                <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
-                    <div class="section-title" style="text-align: left;">
-                        <span class="subtitle">About Company</span>
-                        <h2>We Provide the Best Insurance & Investment Planning</h2>
-                    </div>
-                    <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 1.1rem;">
-                        I am <strong>Vipul B Patel</strong>, CFN Expert, MDRT Chief Life Insurance and investment planning advisor connected to the Ahmedabad city branch.
-                    </p>
-                    <p style="color: var(--text-muted); margin-bottom: 30px;">
-                        I am sure you will give me the chance to serve you. I shall be very glad to provide you with various information about life insurance products, general insurance, and mutual funds (SIP).
-                    </p>
-                    
-                    <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px;">
-                        <li style="display: flex; align-items: center; gap: 10px;">
-                            <i class="fas fa-check-circle" style="color: var(--accent);"></i>
-                            <span>Life Insurance</span>
-                        </li>
-                        <li style="display: flex; align-items: center; gap: 10px;">
-                            <i class="fas fa-check-circle" style="color: var(--accent);"></i>
-                            <span>Mediclaim</span>
-                        </li>
-                        <li style="display: flex; align-items: center; gap: 10px;">
-                            <i class="fas fa-check-circle" style="color: var(--accent);"></i>
-                            <span>General Insurance</span>
-                        </li>
-                        <li style="display: flex; align-items: center; gap: 10px;">
-                            <i class="fas fa-check-circle" style="color: var(--accent);"></i>
-                            <span>Mutual Funds (SIP)</span>
-                        </li>
-                    </ul>
-                    
-                    <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
-                        <a href="about.html" class="btn btn-primary">Discover More</a>
-                        <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center; color: var(--secondary); font-size: 1.2rem;">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div>
-                                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Call Our Expert</p>
-                                <a href="tel:9879444710" style="font-weight: 700; color: var(--primary);">+91 98794 44710</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-widget" data-aos="fade-up" data-aos-delay="100">
-                    <img src="assets/images/resources/logo-lic-final.png" alt="Logo" style="margin-bottom: 20px; filter: brightness(0) invert(1); height: 80px;">
-                    <p style="color: var(--text-muted); margin-bottom: 20px;">Providing the best financial planning for a secure life and family future.</p>
-                    <ul class="footer-links">
-                        <li style="display: flex; gap: 10px; align-items: flex-start; margin-bottom: 15px;">
-                            <i class="fas fa-envelope" style="color: var(--secondary); margin-top: 5px;"></i>
-                            <a href="mailto:vipulpatel2089@gmail.com">vipulpatel2089@gmail.com</a>
-                        </li>
-                        <li style="display: flex; gap: 10px; align-items: flex-start;">
-                            <i class="fas fa-map-marker-alt" style="color: var(--secondary); margin-top: 5px;"></i>
-                            <span style="color: var(--text-muted); line-height: 1.6;">B/43, Ground floor, Sardar Patel Mall-B, Nr. Bank of Baroda, Nikol Gam Road, Nikol, Ahmedabad 382350.</span>
-                        </li>
-                    </ul>
-                    <div style="display: flex; gap: 12px; margin-top: 25px;">
-                        <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-widget" data-aos="fade-up" data-aos-delay="200">
-                    <h4>Useful Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-widget" data-aos="fade-up" data-aos-delay="300" style="grid-column: span 2;">
-                    <h4>Services</h4>
-                    <ul class="footer-links" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 30px;">
-                        <li><a href="child_edu_fund.html">Child Education Fund</a></li>
-                        <li><a href="retirement_planning.html">Retirement Plan</a></li>
-                        <li><a href="term_plan.html">Term Plan</a></li>
-                        <li><a href="mediclaim.html">Mediclaim</a></li>
-                        <li><a href="mutual_fund.html">SIP, Mutual Fund</a></li>
-                        <li><a href="vehicle_insurance.html">Vehicle Insurance</a></li>
-                        <li><a href="fire_policy.html">Fire Policy</a></li>
-                        <li><a href="keyman_insurance.html">Keyman Insurance</a></li>
-                        <li><a href="employee_insurance.html">Employer Employee Insurance</a></li>
-                        <li><a href="fd_planning.html">FD Planning</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Shree Krishna Life Care. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Krishna Life Care | Premium Financial & Insurance Planning</title>
+    
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="Best financial planning for secure life and family. We provide the best insurance and investment planning in Ahmedabad.">
+    <meta name="keywords" content="Life Insurance, Mediclaim, Mutual Funds, General Insurance, SIP, Investment Planning">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Vendor CSS (AOS, FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header glass">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/resources/logo-lic.png" alt="Shree Krishna Life Care">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-links">
+                <a href="index.html" id="nav-home" class="active">Home</a>
+                <a href="about.html" id="nav-about">About Us</a>
+                <div class="dropdown">
+                    <a href="services.html" id="nav-services">Services <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
+                    <div class="mega-menu glass">
+                        <div class="mega-menu-list">
+                            
+                            <ul>
+                                <li><a href="child_edu_fund.html"><i class="fas fa-graduation-cap"></i> Child Education Fund</a></li>
+                                <li><a href="child_mrg_fund.html"><i class="fas fa-ring"></i> Child Marriage Fund</a></li>
+                                <li><a href="yuva_pension_plan.html"><i class="fas fa-user-shield"></i> Yuva Pension Plan</a></li>
+                                <li><a href="retirement_planning.html"><i class="fas fa-umbrella-beach"></i> Retirement Plan</a></li>
+                                <li><a href="term_plan.html"><i class="fas fa-heartbeat"></i> Term Plan</a></li>
+                                <li><a href="mediclaim.html"><i class="fas fa-file-medical"></i> Mediclaim</a></li>
+                                <li><a href="mutual_fund.html"><i class="fas fa-chart-line"></i> SIP, Mutual Fund</a></li>
+                                <li><a href="accident_policy.html"><i class="fas fa-car-crash"></i> Accident Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-list">
+                            <h4>General & Business</h4>
+                            <ul>
+                                <li><a href="vehicle_insurance.html"><i class="fas fa-car"></i> Vehicle Insurance</a></li>
+                                <li><a href="shopkipar_policy.html"><i class="fas fa-store"></i> Shop Keeper Policy</a></li>
+                                <li><a href="fire_policy.html"><i class="fas fa-fire-extinguisher"></i> Fire Policy</a></li>
+                                <li><a href="keyman_insurance.html"><i class="fas fa-key"></i> Keyman Insurance</a></li>
+                                <li><a href="employee_insurance.html"><i class="fas fa-users-cog"></i> Employer Employee</a></li>
+                                <li><a href="monthly_scheme.html"><i class="fas fa-calendar-alt"></i> Monthly Saving Scheme</a></li>
+                                <li><a href="fd_planning.html"><i class="fas fa-piggy-bank"></i> FD Planning</a></li>
+                                <li><a href="tax_planning.html"><i class="fas fa-percent"></i> Tax Planning</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                <a href="gallery.html" id="nav-gallery">Achievements</a>
+                <a href="contact.html" id="nav-contact">Contact Us</a>
+            </nav>
+            
+            <div class="header-cta" style="display: flex; align-items: center; gap: 15px;">
+                <a href="tel:9879444710" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">
+                    <i class="fas fa-phone mr-2"></i> +91 98794 44710
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section modern-hero">
+        <div class="container">
+            <div class="hero-row">
+                <div class="hero-content-col">
+
+                    <!-- Animated Hero Text Slider -->
+                    <div class="hero-slider" id="heroSlider">
+
+                        <!-- Slide 1: Life Insurance -->
+                        <div class="hero-slide active">
+                            <div class="hero-tag">
+                                <i class="fas fa-shield-alt"></i> Life Insurance
+                            </div>
+                            <h1 class="hero-heading">
+                                For the <span class="hero-highlight">Better Family</span>
+                            </h1>
+                            <p class="hero-subtext">
+                                Insurance is a <strong>Risk Management.</strong>
+                            </p>
+                        </div>
+
+                        <!-- Slide 2: Mutual Funds -->
+                        <div class="hero-slide">
+                            <div class="hero-tag">
+                                <i class="fas fa-chart-line"></i> Mutual Funds
+                            </div>
+                            <h1 class="hero-heading">
+                                Fulfill Your <span class="hero-highlight">Future Dreams</span>
+                            </h1>
+                            <p class="hero-subtext">
+                                Mutual Funds is very important to <strong>fulfill your Future Dreams.</strong>
+                            </p>
+                        </div>
+
+                        <!-- Slide 3: Health Insurance -->
+                        <div class="hero-slide">
+                            <div class="hero-tag">
+                                <i class="fas fa-heartbeat"></i> Health Insurance
+                            </div>
+                            <h1 class="hero-heading">
+                                Secure Your <span class="hero-highlight">Savings</span>
+                            </h1>
+                            <p class="hero-subtext">
+                                Mediclaim is very necessary for hospital expenses in this <strong>time of inflation.</strong>
+                            </p>
+                        </div>
+
+                    </div><!-- end hero-slider -->
+
+                    <!-- Slide Dots (above CTA) -->
+                    <div class="hero-dots">
+                        <button class="hero-dot active" onclick="window.goToSlide(0)" aria-label="Slide 1"></button>
+                        <button class="hero-dot" onclick="window.goToSlide(1)" aria-label="Slide 2"></button>
+                        <button class="hero-dot" onclick="window.goToSlide(2)" aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta-wrap">
+                        <a href="contact.html" class="btn btn-primary hero-btn-primary">
+                            <i class="fas fa-calendar-check"></i> Get a Free Consultation
+                        </a>
+                        <a href="about.html" class="btn hero-btn-outline">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="hero-image-col" data-aos="fade-left" data-aos-delay="300">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/images/backgrounds/main-slider-1-1.jpg" alt="Life Insurance">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    /* ── Hero Layout ── */
+    .hero-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 50px;
+    }
+    .hero-content-col {
+        flex: 1 1 340px;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-image-col {
+        flex: 1 1 340px;
+        min-width: 0;
+        position: relative;
+    }
+
+    /* ── Hero Slider: grid-stack trick (no absolute, no height hack) ── */
+    .hero-slider {
+        display: grid;
+        grid-template-areas: "slide";
+        margin-bottom: 36px;
+    }
+    .hero-slide {
+        grid-area: slide;
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.55s cubic-bezier(0.16,1,0.3,1),
+                    transform 0.55s cubic-bezier(0.16,1,0.3,1);
+        pointer-events: none;
+        visibility: hidden;
+        will-change: opacity, transform;
+    }
+    .hero-slide.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        visibility: visible;
+    }
+
+    /* ── Hero Typography ── */
+    .hero-heading {
+        font-size: clamp(2.4rem, 5vw, 4rem) !important;
+        font-weight: 800 !important;
+        line-height: 1.12 !important;
+        letter-spacing: -0.04em !important;
+        color: var(--primary);
+        margin: 16px 0 18px;
+    }
+    .hero-highlight {
+        color: var(--secondary);
+        position: relative;
+    }
+    .hero-subtext {
+        font-size: clamp(1rem, 2vw, 1.2rem) !important;
+        color: var(--text-muted);
+        line-height: 1.75 !important;
+        margin: 0;
+    }
+    .hero-subtext strong {
+        color: var(--primary);
+    }
+
+    /* ── Hero Tag ── */
+    .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(37,99,235,0.05));
+        border: 1px solid rgba(37,99,235,0.25);
+        color: var(--secondary);
+        font-weight: 700;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        border-radius: 50px;
+        backdrop-filter: blur(4px);
+    }
+
+    /* ── CTA Buttons ── */
+    .hero-cta-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 28px;
+    }
+    .hero-btn-primary {
+        gap: 10px;
+        padding: 15px 32px;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+    .hero-btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 30px;
+        border-radius: 100px;
+        font-weight: 600;
+        font-size: 1rem;
+        border: 2px solid var(--secondary) !important;
+        color: var(--secondary) !important;
+        background: transparent;
+        transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
+        white-space: nowrap;
+    }
+    .hero-btn-outline:hover {
+        background: var(--secondary) !important;
+        color: #fff !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(37,99,235,0.25);
+    }
+    .hero-btn-outline i {
+        transition: transform 0.3s ease;
+    }
+    .hero-btn-outline:hover i {
+        transform: translateX(4px);
+    }
+
+    /* ── Slide Dots (above CTA) ── */
+    .hero-dots {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 24px;
+        margin-top: 4px;
+    }
+    .hero-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 2px solid var(--secondary);
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
+        padding: 0;
+        outline: none;
+    }
+    .hero-dot:hover {
+        background: rgba(37,99,235,0.3);
+        transform: scale(1.2);
+    }
+    .hero-dot.active {
+        background: var(--secondary);
+        width: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(37,99,235,0.4);
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+        .hero-row {
+            flex-direction: column !important;
+            gap: 36px !important;
+            text-align: center;
+        }
+        .hero-content-col {
+            align-items: center;
+        }
+        .hero-dots {
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .hero-cta-wrap {
+            justify-content: center;
+            flex-direction: row !important;
+            gap: 12px !important;
+        }
+        .hero-btn-primary,
+        .hero-btn-outline {
+            width: auto !important;
+            flex: 0 0 auto;
+        }
+        .hero-heading {
+            font-size: clamp(2rem, 8vw, 2.8rem) !important;
+        }
+    }
+    @media (max-width: 480px) {
+        .hero-cta-wrap {
+            flex-direction: column !important;
+            align-items: stretch !important;
+        }
+        .hero-btn-primary,
+        .hero-btn-outline {
+            width: 100% !important;
+            justify-content: center;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .hero-slide { transition: none !important; }
+    }
+    </style>
+
+    <script>
+    (function() {
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.hero-dot');
+        let current = 0;
+        let timer = null;
+        let locked = false;
+
+        function setActive(index) {
+            if (!slides.length) return;
+            slides.forEach((s, i) => {
+                if (i === index) s.classList.add('active');
+                else s.classList.remove('active');
+            });
+            // dots are optional (some pages may not have them)
+            if (dots && dots.length) {
+                dots.forEach((d, i) => {
+                    if (i === index) d.classList.add('active');
+                    else d.classList.remove('active');
+                });
+            }
+            current = index;
+        }
+
+        function goToSlide(n) {
+            if (locked || !slides.length) return;
+            locked = true;
+            const next = (n + slides.length) % slides.length;
+            setActive(next);
+            window.setTimeout(() => { locked = false; }, 650);
+        }
+
+        function resetTimer() {
+            if (timer) clearInterval(timer);
+            timer = setInterval(() => goToSlide(current + 1), 4000);
+        }
+
+        // expose (if you later add dots with onclick)
+        window.goToSlide = function(n) { goToSlide(n); resetTimer(); };
+
+        // ensure correct initial state
+        setActive(current);
+        resetTimer();
+    })();
+    </script>
+
+
+    <!-- Features Section -->
+    <section class="section-padding bg-gradient-animated">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <span class="subtitle">Why Choose Us</span>
+                <h2>Peace of Mind for Your Future</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <!-- Feature 1 -->
+                <div class="card glass" data-aos="fade-up" data-aos-delay="100">
+                    <div style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px;">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px;">Peace Of Mind</h3>
+                    <p style="color: var(--text-muted);">Refers to the reassurance and security that comes from knowing that one's loved ones will be financially protected.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="card glass" data-aos="fade-up" data-aos-delay="200">
+                    <div style="font-size: 2.5rem; color: var(--accent); margin-bottom: 20px;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px;">Secure Family</h3>
+                    <p style="color: var(--text-muted);">Securing your family's financial future through life insurance is an essential step in comprehensive financial planning.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="card glass" data-aos="fade-up" data-aos-delay="300">
+                    <div style="font-size: 2.5rem; color: #f59e0b; margin-bottom: 20px;">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px;">Happy Retirement</h3>
+                    <p style="color: var(--text-muted);">Happy retirement planning involves a thorough understanding of investment strategies to ensure a comfortable future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
+                <div style="flex: 1; min-width: 300px; position: relative;" data-aos="fade-right">
+                    <img src="assets/images/resources/about-one-img-1.jpg" alt="About Shree Krishna Life Care" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                    <div class="glass" style="position: absolute; bottom: -30px; right: -30px; padding: 30px; border-radius: var(--radius-md); text-align: center; border-left: 4px solid var(--secondary);">
+                        <h2 style="font-size: 3rem; color: var(--secondary); margin-bottom: 0;">14+</h2>
+                        <p style="font-weight: 600; color: var(--primary);">Years of Experience</p>
+                    </div>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
+                    <div class="section-title" style="text-align: left;">
+                        <span class="subtitle">About Company</span>
+                        <h2>We Provide the Best Insurance & Investment Planning</h2>
+                    </div>
+                    <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 1.1rem;">
+                        I am <strong>Vipul B Patel</strong>, CFN Expert, MDRT Chief Life Insurance and investment planning advisor connected to the Ahmedabad city branch.
+                    </p>
+                    <p style="color: var(--text-muted); margin-bottom: 30px;">
+                        I am sure you will give me the chance to serve you. I shall be very glad to provide you with various information about life insurance products, general insurance, and mutual funds (SIP).
+                    </p>
+                    
+                    <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px;">
+                        <li style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-check-circle" style="color: var(--accent);"></i>
+                            <span>Life Insurance</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-check-circle" style="color: var(--accent);"></i>
+                            <span>Mediclaim</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-check-circle" style="color: var(--accent);"></i>
+                            <span>General Insurance</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-check-circle" style="color: var(--accent);"></i>
+                            <span>Mutual Funds (SIP)</span>
+                        </li>
+                    </ul>
+                    
+                    <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+                        <a href="about.html" class="btn btn-primary">Discover More</a>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center; color: var(--secondary); font-size: 1.2rem;">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Call Now</p>
+                                <a href="tel:9879444710" style="font-weight: 700; color: var(--primary);">+91 98794 44710</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/resources/logo-lic-final.png" alt="Logo" style="margin-bottom: 20px; filter: brightness(0) invert(1); height: 80px;">
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Providing the best financial planning for a secure life and family future.</p>
+                    <ul class="footer-links">
+                        <li style="display: flex; gap: 10px; align-items: flex-start; margin-bottom: 15px;">
+                            <i class="fas fa-envelope" style="color: var(--secondary); margin-top: 5px;"></i>
+                            <a href="mailto:vipulpatel2089@gmail.com">vipulpatel2089@gmail.com</a>
+                        </li>
+                        <li style="display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--secondary); margin-top: 5px;"></i>
+                            <span style="color: var(--text-muted); line-height: 1.6;">B/43, Ground floor, Sardar Patel Mall-B, Nr. Bank of Baroda, Nikol Gam Road, Nikol, Ahmedabad 382350.</span>
+                        </li>
+                    </ul>
+                    <div class="social-icons-wrap">
+                        <a href="https://www.facebook.com/share/1FE8nHJ7vH/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/vipulpatel2305?igsh=eTdscWdlZm0xbDU0" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-widget" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Useful Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        
+                        
+                    </ul>
+                </div>
+                
+                <div class="footer-widget" data-aos="fade-up" data-aos-delay="300" style="grid-column: span 2;">
+                    <h4>Services</h4>
+                    <ul class="footer-links" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 30px;">
+                        <li><a href="child_edu_fund.html">Child Education Fund</a></li>
+                        <li><a href="retirement_planning.html">Retirement Plan</a></li>
+                        <li><a href="term_plan.html">Term Plan</a></li>
+                        <li><a href="mediclaim.html">Mediclaim</a></li>
+                        <li><a href="mutual_fund.html">SIP, Mutual Fund</a></li>
+                        <li><a href="vehicle_insurance.html">Vehicle Insurance</a></li>
+                        <li><a href="fire_policy.html">Fire Policy</a></li>
+                        <li><a href="keyman_insurance.html">Keyman Insurance</a></li>
+                        <li><a href="employee_insurance.html">Employer Employee Insurance</a></li>
+                        <li><a href="fd_planning.html">FD Planning</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shree Krishna Life Care. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

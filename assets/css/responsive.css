@@ -151,6 +151,19 @@
     gap: 40px;
   }
 
+  /* Center the heading indicator on mobile */
+  .footer-widget h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer-widget h4::before {
+    left: calc(50% + 28px);
+    transform: translate(0, 50%);
+  }
+  .footer-widget:hover h4::after {
+    width: 48px;
+  }
+
   .footer-widget img {
     margin: 0 auto 20px;
   }
@@ -162,8 +175,9 @@
     justify-content: center !important;
   }
 
-  /* Force stack inline styles */
-  div[style*="display: flex;"] {
+  /* Stack layout flex rows (not button groups) */
+  .row[style*="display: flex;"],
+  section > .container > div[style*="display: flex;"] {
     flex-direction: column !important;
     gap: 40px !important;
     text-align: center;
@@ -200,10 +214,5 @@
 @media (max-width: 480px) {
   .container {
     padding: 0 20px;
-  }
-  
-  .btn {
-    width: 100%;
-    margin-bottom: 15px;
   }
 }

@@ -105,17 +105,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if(counters.length > 0 && typeof gsap !== 'undefined') {
         counters.forEach(counter => {
             const target = parseFloat(counter.getAttribute('data-target'));
-            gsap.to(counter, {
+            /* Fix: set min-width to prevent layout reflow during animation */
+            counter.style.display = 'inline-block';
+            counter.style.minWidth = (String(target).length + 1) + 'ch';
+            counter.style.textAlign = 'right';
+            const obj = { val: 0 };
+            gsap.to(obj, {
                 scrollTrigger: {
                     trigger: counter,
                     start: 'top 85%'
                 },
-                innerHTML: target,
+                val: target,
                 duration: 2,
-                snap: { innerHTML: 1 },
                 ease: "power1.inOut",
                 onUpdate: function() {
-                    counter.innerHTML = Math.ceil(this.targets()[0].innerHTML);
+                    counter.textContent = Math.ceil(obj.val);
                 }
             });
         });
