@@ -209,10 +209,41 @@
   .footer-widget {
     grid-column: span 1 !important;
   }
+
+  /* Service page CTA buttons - centered & stacked on mobile */
+  .service-cta-group {
+    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 14px !important;
+  }
+
+  .service-cta-group .btn {
+    width: 100% !important;
+    max-width: 320px !important;
+    min-width: unset !important;
+    padding: 15px 24px !important;
+  }
 }
 
 @media (max-width: 480px) {
   .container {
     padding: 0 20px;
+  }
+
+  /* Ensure buttons are fully centered and full width on smallest screens */
+  .service-cta-group {
+    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .service-cta-group .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: unset !important;
+    padding: 14px 20px !important;
+    font-size: 0.95rem !important;
   }
 }
