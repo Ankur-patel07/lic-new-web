@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -164,11 +164,14 @@
                 <div style="flex: 1; min-width: 300px; padding-top: 40px;" data-aos="fade-left">
                     <div class="section-title" style="text-align: left; margin-bottom: 30px;">
                         <span class="subtitle">About Company</span>
-                        <h2>Creating a better future for your loved ones</h2>
+                        <h2 style="color: #000077;">Creating a better future for your loved ones</h2>
                     </div>
                     
+                    <strong>
+                    <p>Providing the best financial planning for a secure family.</p></strong>
+                    <br>
                     <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8;">
-                        I am <strong>Vipul B. Patel</strong>, CFN expert, MDRT Chief Life Insurance adviser connected to the Ahmedabad city branch.
+                        I am <strong>Vipul B. Patel</strong>, CFN expert, MDRT Insurance & Investment adviser connected to the Ahmedabad city branch.
                     </p>
                     <p style="color: var(--text-muted); margin-bottom: 20px; line-height: 1.8;">
                         Presently I am serving more than <span class="counter-value" data-target="905" style="font-weight: bold; color: var(--secondary);">0</span> satisfied customers. My goal is customer satisfaction and to sell only need-based insurance to my customers. I am also giving services for life insurance, Mediclaim, general insurance, and mutual funds (SIP).
@@ -188,52 +191,281 @@
         <div class="container">
             <div class="section-title" data-aos="fade-up">
                 <span class="subtitle">Testimonials</span>
-                <h2>What our happy customers are saying</h2>
+                <h2 style="color: #000077;">What our happy customers are saying</h2>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <div class="card glass" data-aos="fade-up" data-aos-delay="100">
-                    <div style="color: #fbbf24; margin-bottom: 15px;">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"The best ever service provider in the insurance industry. Mr. Vipul you are Down to earth & Co-operative in nature."</p>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <img src="assets/images/testimonial/user.svg" alt="Sagar Kothari" style="width: 50px; height: 50px; border-radius: 50%;">
-                        <div>
-                            <h4 style="font-size: 1rem; color: var(--primary);">Sagar Kothari</h4>
-                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Client</p>
+            <!-- Testimonial Carousel -->
+            <style>
+                .tcarousel { position: relative; }
+                .tcarousel-viewport { overflow: hidden; }
+                .tcarousel-track {
+                    display: flex;
+                    gap: 28px;
+                    transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    align-items: stretch;
+                }
+                .tcard {
+                    flex-shrink: 0;
+                    background: #ffffff;
+                    border-radius: 24px;
+                    padding: 36px 32px 30px;
+                    box-shadow: 0 8px 32px rgba(10, 15, 29, 0.08), 0 1px 4px rgba(10,15,29,0.04);
+                    border: 1px solid rgba(37, 99, 235, 0.08);
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    transition: box-shadow 0.3s ease, transform 0.3s ease;
+                }
+                .tcard:hover {
+                    transform: translateY(-6px);
+                    box-shadow: 0 20px 48px rgba(37, 99, 235, 0.14), 0 4px 12px rgba(10,15,29,0.06);
+                }
+               
+                .tcard-stars {
+                    color: #fbbf24;
+                    font-size: 0.9rem;
+                    letter-spacing: 2px;
+                    margin-bottom: 16px;
+                }
+                .tcard-text {
+                    font-style: italic;
+                    color: #475569;
+                    font-size: 1rem;
+                    line-height: 1.75;
+                    flex: 1;
+                    margin-bottom: 28px;
+                    position: relative;
+                    z-index: 1;
+                }
+                .tcard-author {
+                    display: flex;
+                    align-items: center;
+                    gap: 14px;
+                    border-top: 1px solid rgba(37,99,235,0.08);
+                    padding-top: 20px;
+                    margin-top: auto;
+                }
+                .tcard-avatar {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                }
+                .tcard-avatar i { font-size: 1.4rem; color: #ffffff; }
+                .tcard-name { font-size: 1rem; font-weight: 700; color: #0a0f1d; margin: 0 0 2px; }
+                .tcard-role { font-size: 0.78rem; color: #2563eb; font-weight: 600; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
+
+                /* Nav Buttons */
+                .tcarousel-btn {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background: #ffffff;
+                    border: 2px solid rgba(37,99,235,0.2);
+                    color: #2563eb;
+                    font-size: 1.3rem;
+                    cursor: pointer;
+                    z-index: 10;
+                    box-shadow: 0 4px 16px rgba(37,99,235,0.15);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.25s ease;
+                    line-height: 1;
+                }
+                .tcarousel-btn:hover {
+                    background: #2563eb;
+                    color: #fff;
+                    border-color: #2563eb;
+                    transform: translateY(-50%) scale(1.1);
+                    box-shadow: 0 8px 24px rgba(37,99,235,0.3);
+                }
+                .tcarousel-btn.prev { left: -24px; }
+                .tcarousel-btn.next { right: -24px; }
+
+                /* Dots */
+                .tcarousel-dots {
+                    display: flex;
+                    justify-content: center;
+                    gap: 8px;
+                    margin-top: 32px;
+                }
+                .tcarousel-dots span {
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: #cbd5e1;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+                .tcarousel-dots span.active {
+                    background: #2563eb;
+                    width: 24px;
+                    border-radius: 4px;
+                }
+
+                @media (max-width: 767px) {
+                    .tcarousel-btn.prev { left: 0; }
+                    .tcarousel-btn.next { right: 0; }
+                    .tcard { padding: 28px 22px 24px; }
+                }
+            </style>
+
+            <div class="tcarousel" data-aos="fade-up">
+                <div class="tcarousel-viewport" style="padding: 10px 4px 10px;">
+                    <div class="tcarousel-track" id="tTrack">
+
+                        <!-- Card 1 -->
+                        <div class="tcard">
+                        
+                            <div class="tcard-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="tcard-text">The best ever service provider in the insurance industry. Mr. Vipul you are down to earth &amp; co-operative in nature.</p>
+                            <div class="tcard-author">
+                                <div class="tcard-avatar"><i class="fas fa-user"></i></div>
+                                <div>
+                                    <p class="tcard-name">Sagar Kothari</p>
+                                    <p class="tcard-role">Verified Client</p>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Card 2 -->
+                        <div class="tcard">
+                            <div class="tcard-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="tcard-text">Mr Vipul knows what he is dealing with. Very human approach towards every requirement. A respected personality amongst the community.</p>
+                            <div class="tcard-author">
+                                <div class="tcard-avatar"><i class="fas fa-user"></i></div>
+                                <div>
+                                    <p class="tcard-name">Bhavesh Patel</p>
+                                    <p class="tcard-role">Verified Client</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="tcard">
+                            <div class="tcard-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="tcard-text">Superb services, very good knowledge about all the possible ways which are useful for us as an investor.</p>
+                            <div class="tcard-author">
+                                <div class="tcard-avatar"><i class="fas fa-user"></i></div>
+                                <div>
+                                    <p class="tcard-name">Utpal V. Patel</p>
+                                    <p class="tcard-role">Verified Client</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="tcard">
+                            <div class="tcard-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="tcard-text">Helping nature of Vipul Patel and wonderful knowledge of all Financial services. Thank you so much Vipul Patel.</p>
+                            <div class="tcard-author">
+                                <div class="tcard-avatar"><i class="fas fa-user"></i></div>
+                                <div>
+                                    <p class="tcard-name">Rushit Patel</p>
+                                    <p class="tcard-role">Verified Client</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="tcard">
+                            <div class="tcard-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="tcard-text">Knowledge about insurance industries is very amazing and always gives good suggestions.</p>
+                            <div class="tcard-author">
+                                <div class="tcard-avatar"><i class="fas fa-user"></i></div>
+                                <div>
+                                    <p class="tcard-name">Darshan Dholakiya</p>
+                                    <p class="tcard-role">Verified Client</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="tcard">
+                            <div class="tcard-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="tcard-text">Very professional service and responsive. Will continue utilizing their service.</p>
+                            <div class="tcard-author">
+                                <div class="tcard-avatar"><i class="fas fa-user"></i></div>
+                                <div>
+                                    <p class="tcard-name">Sunny Patel</p>
+                                    <p class="tcard-role">Verified Client</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                
-                <div class="card glass" data-aos="fade-up" data-aos-delay="200">
-                    <div style="color: #fbbf24; margin-bottom: 15px;">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"Mr Vipul knows what he is dealing with. Very human approach towards every requirement. A respected personality amongst the community."</p>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <img src="assets/images/testimonial/user.svg" alt="Bhavesh Patel" style="width: 50px; height: 50px; border-radius: 50%;">
-                        <div>
-                            <h4 style="font-size: 1rem; color: var(--primary);">Bhavesh Patel</h4>
-                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Client</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card glass" data-aos="fade-up" data-aos-delay="300">
-                    <div style="color: #fbbf24; margin-bottom: 15px;">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"Superb services, very good knowledge about all the possible ways which are useful for us as an investor."</p>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <img src="assets/images/testimonial/user.svg" alt="Utpal V. Patel" style="width: 50px; height: 50px; border-radius: 50%;">
-                        <div>
-                            <h4 style="font-size: 1rem; color: var(--primary);">Utpal V. Patel</h4>
-                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Client</p>
-                        </div>
-                    </div>
-                </div>
+
+                <button class="tcarousel-btn prev" onclick="tMove(-1)" aria-label="Previous">&#8249;</button>
+                <button class="tcarousel-btn next" onclick="tMove(1)"  aria-label="Next">&#8250;</button>
             </div>
+
+            <div class="tcarousel-dots" id="tDots"></div>
+
+            <script>
+            (function () {
+                const GAP = 28;
+                const track = document.getElementById('tTrack');
+                const dotsWrap = document.getElementById('tDots');
+                const slides = Array.from(track.querySelectorAll('.tcard'));
+                let cur = 0, autoTimer;
+
+                function visible() {
+                    return window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+                }
+
+                function maxIdx() { return Math.max(0, slides.length - visible()); }
+
+                function slideWidth() {
+                    const vp = track.parentElement;
+                    return (vp.offsetWidth - GAP * (visible() - 1)) / visible();
+                }
+
+                function setWidths() {
+                    const w = slideWidth();
+                    slides.forEach(s => { s.style.width = w + 'px'; s.style.flexShrink = '0'; });
+                }
+
+                function renderDots() {
+                    dotsWrap.innerHTML = '';
+                    for (let i = 0; i <= maxIdx(); i++) {
+                        const d = document.createElement('span');
+                        if (i === cur) d.classList.add('active');
+                        d.addEventListener('click', () => goTo(i));
+                        dotsWrap.appendChild(d);
+                    }
+                }
+
+                function goTo(idx) {
+                    cur = Math.min(Math.max(idx, 0), maxIdx());
+                    const offset = cur * (slideWidth() + GAP);
+                    track.style.transform = 'translateX(-' + offset + 'px)';
+                    renderDots();
+                }
+
+                function resetAuto() {
+                    clearInterval(autoTimer);
+                    autoTimer = setInterval(() => goTo(cur >= maxIdx() ? 0 : cur + 1), 4500);
+                }
+
+                window.tMove = function (dir) { goTo(cur + dir); resetAuto(); };
+
+                window.addEventListener('resize', () => { setWidths(); goTo(Math.min(cur, maxIdx())); });
+
+                setWidths();
+                goTo(0);
+                resetAuto();
+            })();
+            </script>
         </div>
     </section>
 

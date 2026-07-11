@@ -303,7 +303,7 @@ img {
   line-height: 1.8 !important;
 }
 
-/* Hero Mesh Design */
+/* Hero Mesh Design — legacy class kept for other pages */
 .modern-hero {
   position: relative;
   background-color: var(--light);
@@ -340,24 +340,17 @@ img {
   filter: blur(60px);
 }
 
+/* hero-image-wrapper used inside modern-hero on other pages */
 .hero-image-wrapper {
   position: relative;
   z-index: 2;
   border-radius: var(--radius-lg);
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
-  transform: perspective(1000px) rotateY(-5deg) translateY(-10px);
-  transition: transform 0.5s ease;
-}
-.hero-image-wrapper:hover {
-  transform: perspective(1000px) rotateY(0deg) translateY(0);
+  overflow: hidden;
 }
 .hero-image-wrapper img {
-  border-radius: calc(var(--radius-lg) - 5px);
+  border-radius: var(--radius-lg);
   width: 100%;
+  display: block;
 }
 
 .page-header,
@@ -748,4 +741,11 @@ img {
   font-size: 0.9rem;
   position: relative;
   z-index: 1;
+}
+
+/* =============================================
+   Service page titles - brand navy color
+   ============================================= */
+.section-title h2 {
+  color: #00007F !important;
 }
